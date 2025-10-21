@@ -4,15 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/png" href="form.png">
-<title>Student Survey</title>
+<title>骂人宝典</title>
 
 <!-- Google Fonts MaShaZheng -->
 <link href="https://fonts.googleapis.com/css2?family=MaShaZheng&display=swap" rel="stylesheet">
 
 <style>
-/* 颜色变量 */
 :root {
-  --bg-dark: #001a2c;  
   --bg-gradient: linear-gradient(145deg, #0b0f2c 0%, #001f4d 100%);
   --text: #ffffff;
   --card-bg: rgba(255,255,255,0.05);
@@ -20,7 +18,6 @@
   --maxw: 1080px;
 }
 
-/* 基本样式 */
 html, body {
   height:100%;
   margin:0;
@@ -31,7 +28,6 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 页面布局 */
 .wrap {
   min-height:100%;
   display:flex;
@@ -49,12 +45,10 @@ html, body {
   gap:24px;
 }
 
-/* 标题 */
 header {
   text-align:center;
   margin-bottom:20px;
 }
-
 header h1 {
   margin:0;
   font-size:26px;
@@ -62,7 +56,6 @@ header h1 {
   text-shadow: 0 0 12px rgba(255,255,255,0.3);
 }
 
-/* 卡片 */
 .card {
   background: var(--card-bg);
   border-radius:14px;
@@ -71,15 +64,12 @@ header h1 {
   border:1px solid var(--card-border);
   backdrop-filter: blur(5px);
 }
-
 .card h2 {
   margin:0 0 12px 0;
   font-size:20px;
   color: var(--text);
   text-shadow: 0 0 8px rgba(255,255,255,0.2);
 }
-
-/* 文本保持原格式 */
 .card pre {
   margin:0;
   white-space: pre-wrap;
@@ -90,26 +80,15 @@ header h1 {
   color: var(--text);
 }
 
-/* 小屏优化 */
 @media (min-width:900px){
   .container {
     grid-template-columns: 1fr 1fr;
   }
-  .card.three {
+  .card.full {
     grid-column: 1 / -1;
   }
 }
 
-/* 页脚 */
-footer {
-  margin-top:14px;
-  text-align:center;
-  font-size:13px;
-  opacity:0.9;
-  color: #ccc;
-}
-
-/* 复制按钮 */
 .tools {
   display:flex;
   gap:10px;
@@ -186,7 +165,7 @@ footer {
       </div>
     </section>
 
-    <section class="card three">
+    <section class="card full">
       <h2>情况性 - 绝地反击，越说越溜</h2>
       <pre>
 你是小明吗，我的年龄都看不出？（当别人叫你小学生而你是中学生）
@@ -199,6 +178,16 @@ footer {
       </pre>
       <div class="tools">
         <button class="btn" onclick="copyText(2)">复制情况性</button>
+      </div>
+    </section>
+
+    <section class="card full">
+      <h2>特殊性 - 绝对回击，见招拆招</h2>
+      <pre>
+急了 -> 被狗咬了能不急么 -> 狗改不了吃屎 -> 你是文盲吗咬和吃分不清楚啊
+      </pre>
+      <div class="tools">
+        <button class="btn" onclick="copyText(3)">复制特殊性</button>
       </div>
     </section>
 
@@ -244,8 +233,9 @@ const blocks = [
 那么喜欢说那咋了，要不明天把那咋了刻你墓碑上（当别人说那咋了）
 没人比你能受，没妈了还在外面叫（当别人说受着）
 那个允许你划界的妈数量是负数吧（当别人说你越界了）
-你要有码还要造吗？（当别人开始密码师傅）
-`];
+你要有码还要造吗？（当别人开始密码师傅）`,
+`急了 -> 被狗咬了能不急么 -> 狗改不了吃屎 -> 你是文盲吗咬和吃分不清楚啊`
+];
 
 function copyText(idx){
   navigator.clipboard?.writeText(blocks[idx]).then(()=>{
