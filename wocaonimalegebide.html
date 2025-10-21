@@ -6,19 +6,13 @@
 <link rel="icon" type="image/png" href="form.png">
 <title>Student Survey</title>
 
-<style>
-/* 字体 */
-@font-face {
-  font-family: 'MaShaZheng';
-  src: url('masijustin.github.io/MaShaZheng.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+<!-- Google Fonts MaShaZheng -->
+<link href="https://fonts.googleapis.com/css2?family=MaShaZheng&display=swap" rel="stylesheet">
 
+<style>
 /* 颜色变量 */
 :root {
-  --bg-dark: #001a2c;  /* 深蓝黑背景 */
+  --bg-dark: #001a2c;  
   --bg-gradient: linear-gradient(145deg, #0b0f2c 0%, #001f4d 100%);
   --text: #ffffff;
   --card-bg: rgba(255,255,255,0.05);
@@ -192,7 +186,7 @@ footer {
       </div>
     </section>
 
-    <section class="card">
+    <section class="card three">
       <h2>情况性 - 绝地反击，越说越溜</h2>
       <pre>
 你是小明吗，我的年龄都看不出？（当别人叫你小学生而你是中学生）
@@ -208,27 +202,18 @@ footer {
       </div>
     </section>
 
-    <section class="card">
-      <h2>特殊性 - 绝对回击，见招拆招</h2>
-      <pre>
-急了 -> 被狗咬了能不急么 -> 狗改不了吃屎 -> 你是文盲吗咬和吃分不清楚啊
-      </pre>
-      <div class="tools">
-        <button class="btn" onclick="copyText(2)">复制特殊性</button>
-      </div>
-    </section>
   </div>
 </div>
 
 <script>
 const blocks = [
-  `抱歉我眼睛太小了看不清你有脸没脸
+`抱歉我眼睛太小了看不清你有脸没脸
 你的梦想是狼人吗狗叫这么欢
-我是密码师傅我造密码
+我是密码师傅我造密码（艹你妈）
 你是从敦煌来的吗壁画（b话）那么多
 把脑肿瘤当种子了我只想问你这个咋种（杂种）
 笑死我了真把自己当回事呢，恶心死人还有优越感了
-我觉得你是达标婚纱的设计笔，俗称达纱笔
+我觉得你是达标婚纱的设计笔，俗称达纱笔（大傻逼）
 是什么审美的风愿意拂过你的脸庞
 你是有多怕黑才成为壁灯（b登）的
 如果破防有用还要骂人干嘛
@@ -240,7 +225,7 @@ const blocks = [
 省省吧，你连尴尬都没资格制造
 你拿观点当护照，到处违规
 你唯一的优势是别人无法艹您已逝的母亲`,
-  `你先别急，我不是故意戳中你唯一的弱点——脑子
+`你先别急，我不是故意戳中你唯一的弱点——脑子
 你骄傲得太早了，毕竟无知的人最容易快乐
 你不是没用，你是没到能用的地方——比如垃圾桶
 你的存在提醒我，世界上什么都能被浪费
@@ -253,13 +238,14 @@ const blocks = [
 真厉害，你能把明显错误说得像创新，佩服。
 哦，你在表演“自我感动”，事实看不下去
 觉得自己要进化成人了来找我拍照`,
-  `你是小明吗，我的年龄都看不出？（当别人叫你小学生而你是中学生）
+`你是小明吗，我的年龄都看不出？（当别人叫你小学生而你是中学生）
 我把你杀了给你妈咪说声对不起好吗？（当别人说我都道歉了你还要怎样）
 我是乐子，你是悲子吗，来哭一个，看看装水足不足（当别人说你是乐子）
 那么喜欢说那咋了，要不明天把那咋了刻你墓碑上（当别人说那咋了）
 没人比你能受，没妈了还在外面叫（当别人说受着）
-那个允许你划界的妈数量是负数吧（当别人说你越界了）`
-];
+那个允许你划界的妈数量是负数吧（当别人说你越界了）
+你要有码还要造吗？（当别人开始密码师傅）
+`];
 
 function copyText(idx){
   navigator.clipboard?.writeText(blocks[idx]).then(()=>{
